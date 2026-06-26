@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Stock OUT — মাল গেল"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/white"
+            android:layout_margin="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="আইটেম বেছে নাও" android:textStyle="bold"/>
+            <Spinner android:id="@+id/spinnerItem" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="পরিমাণ" android:textStyle="bold"/>
+            <EditText android:id="@+id/etQuantity" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="পরিমাণ লিখো" android:inputType="numberDecimal" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="টাওয়ার নম্বর" android:textStyle="bold"/>
+            <EditText android:id="@+id/etTower" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="যেমন: Tower-7" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ঠিকাদারের নাম" android:textStyle="bold"/>
+            <EditText android:id="@+id/etContractor" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="ঠিকাদারের নাম" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ইঞ্জিনিয়ারের নাম (সাইন)" android:textStyle="bold"/>
+            <EditText android:id="@+id/etEngineer" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="ইঞ্জিনিয়ারের নাম" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="উদ্দেশ্য" android:textStyle="bold"/>
+            <EditText android:id="@+id/etPurpose" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="যেমন: Line Pump, গাড়ি, সাইড ট্রান্সফার" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="তারিখ" android:textStyle="bold"/>
+            <EditText android:id="@+id/etDate" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="YYYY-MM-DD" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="মন্তব্য (ঐচ্ছিক)" android:textStyle="bold"/>
+            <EditText android:id="@+id/etRemarks" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="মন্তব্য" android:layout_marginBottom="16dp"/>
+            <Button android:id="@+id/btnSaveOut" android:layout_width="match_parent" android:layout_height="56dp" android:text="Stock OUT সেভ করো" android:backgroundTint="@color/red" android:textColor="@color/white" android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

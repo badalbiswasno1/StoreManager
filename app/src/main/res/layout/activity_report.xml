@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/accent"
+        android:padding="16dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="রিপোর্ট ও Export"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ফিল্টার করো" android:textStyle="bold" android:textSize="16sp" android:textColor="@color/primary"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="টাওয়ার" android:layout_marginTop="8dp"/>
+            <Spinner android:id="@+id/spinnerTower" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ঠিকাদার" android:layout_marginTop="8dp"/>
+            <Spinner android:id="@+id/spinnerContractor" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ইঞ্জিনিয়ার" android:layout_marginTop="8dp"/>
+            <Spinner android:id="@+id/spinnerEngineer" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="আইটেম" android:layout_marginTop="8dp"/>
+            <Spinner android:id="@+id/spinnerItem" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="8dp">
+                <EditText android:id="@+id/etFromDate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="From: YYYY-MM-DD" android:inputType="text"/>
+                <EditText android:id="@+id/etToDate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="To: YYYY-MM-DD" android:inputType="text" android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <Button android:id="@+id/btnFilter" android:layout_width="match_parent" android:layout_height="48dp" android:text="ফিল্টার করো" android:backgroundTint="@color/primary" android:textColor="@color/white" android:layout_marginTop="8dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+        <Button android:id="@+id/btnExportCsv" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="CSV Export" android:backgroundTint="@color/green" android:textColor="@color/white" android:textSize="13sp"/>
+        <Button android:id="@+id/btnExportPdf" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="PDF Export" android:backgroundTint="@color/red" android:textColor="@color/white" android:textSize="13sp" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvReport"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"/>
+</LinearLayout>
