@@ -11,11 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private DatabaseHelper db;
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
         SharedPreferences prefs = newBase.getSharedPreferences("settings", Context.MODE_PRIVATE);
         String lang = prefs.getString("language", "bn");
         Locale locale = new Locale(lang);
@@ -25,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
         super.attachBaseContext(newBase.createConfigurationContext(config));
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         db = new DatabaseHelper(this);
@@ -41,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
             .setPositiveButton("OK", null).show());
     }
 
-    @Override
-    protected void onResume() {
         super.onResume();
         updateSummary();
     }

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">स्टोर मैनेजर</string>
+    <string name="store_incharge">स्टोर इंचार्ज</string>
+    <string name="stock_summary">आज का स्टॉक सारांश</string>
+    <string name="manage_items">आइटम प्रबंधित करें</string>
+    <string name="stock_in">स्टॉक IN (माल आया)</string>
+    <string name="stock_out">स्टॉक OUT (माल गया)</string>
+    <string name="report_export">रिपोर्ट और एक्सपोर्ट</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="about">के बारे में</string>
+    <string name="select_item">आइटम चुनें</string>
+    <string name="quantity">मात्रा</string>
+    <string name="dc_number">DC नंबर</string>
+    <string name="gst_number">GST नंबर</string>
+    <string name="purpose">उद्देश्य</string>
+    <string name="date">तारीख</string>
+    <string name="remarks">टिप्पणी (वैकल्पिक)</string>
+    <string name="tower">टावर नंबर</string>
+    <string name="contractor">ठेकेदार का नाम</string>
+    <string name="engineer">इंजीनियर का नाम (साइन)</string>
+    <string name="save">सेव करें</string>
+    <string name="language">भाषा</string>
+    <string name="filter">फ़िल्टर करें</string>
+    <string name="all">सभी</string>
+</resources>

@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemsActivity extends AppCompatActivity {
+public class ItemsActivity extends BaseActivity {
     private DatabaseHelper db;
     private List<Item> allItems = new ArrayList<>();
     private List<Item> filteredItems = new ArrayList<>();

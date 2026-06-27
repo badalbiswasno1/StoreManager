@@ -26,7 +26,7 @@ import java.io.FileWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ReportActivity extends AppCompatActivity {
+public class ReportActivity extends BaseActivity {
     private DatabaseHelper db;
     private List<StockEntry> entries = new ArrayList<>();
     private EntryAdapter adapter;

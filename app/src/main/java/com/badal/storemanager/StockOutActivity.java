@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class StockOutActivity extends AppCompatActivity {
+public class StockOutActivity extends BaseActivity {
     private DatabaseHelper db;
     private List<Item> items = new ArrayList<>();
     private Spinner spinnerItem;

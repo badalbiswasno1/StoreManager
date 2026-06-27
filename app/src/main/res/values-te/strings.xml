@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">స్టోర్ మేనేజర్</string>
+    <string name="store_incharge">స్టోర్ ఇన్‌చార్జ్</string>
+    <string name="stock_summary">నేటి స్టాక్ సారాంశం</string>
+    <string name="manage_items">వస్తువులు నిర్వహించండి</string>
+    <string name="stock_in">స్టాక్ IN (సామాను వచ్చింది)</string>
+    <string name="stock_out">స్టాక్ OUT (సామాను వెళ్ళింది)</string>
+    <string name="report_export">నివేదిక మరియు ఎగుమతి</string>
+    <string name="settings">సెట్టింగులు</string>
+    <string name="about">గురించి</string>
+    <string name="select_item">వస్తువు ఎంచుకోండి</string>
+    <string name="quantity">పరిమాణం</string>
+    <string name="dc_number">DC నంబర్</string>
+    <string name="gst_number">GST నంబర్</string>
+    <string name="purpose">ఉద్దేశ్యం</string>
+    <string name="date">తేదీ</string>
+    <string name="remarks">వ్యాఖ్య (ఐచ్ఛికం)</string>
+    <string name="tower">టవర్ నంబర్</string>
+    <string name="contractor">కాంట్రాక్టర్ పేరు</string>
+    <string name="engineer">ఇంజనీర్ పేరు (సంతకం)</string>
+    <string name="save">సేవ్ చేయండి</string>
+    <string name="language">భాష</string>
+    <string name="filter">వడపోత</string>
+    <string name="all">అన్నీ</string>
+</resources>
