@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Excel / CSV Import"
+            android:text="CSV Import"
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"/>
@@ -30,23 +30,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CSV ফাইল format:"
+            android:text="কিভাবে import করবে:"
             android:textStyle="bold"
             android:textSize="15sp"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="date, type (IN/OUT), item, qty, tower, contractor, engineer, purpose, dc_number, gst_number, remarks"
-            android:textSize="12sp"
-            android:textColor="#555555"
-            android:paddingTop="4dp"
-            android:paddingBottom="12dp"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="• Excel থেকে CSV হিসেবে save করো\n• বাংলা বা English column নাম দুটোই চলবে\n• নতুন আইটেম অটো তৈরি হবে"
+            android:text="১. Excel খোলো (Diesel.xlsx)\n২. File → Save As → CSV format\n৩. নিচের বাটন চেপে সেই CSV বেছে নাও\n৪. সব data অটো import হবে"
             android:textSize="13sp"
             android:textColor="#444444"
+            android:paddingTop="6dp"
             android:paddingBottom="16dp"/>
 
         <Button
@@ -73,8 +66,7 @@
                 android:layout_height="wrap_content"
                 android:padding="16dp"
                 android:text="ফাইল বেছে নিলে এখানে result দেখাবে..."
-                android:textSize="14sp"
-                android:fontFamily="monospace"/>
+                android:textSize="14sp"/>
         </ScrollView>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
