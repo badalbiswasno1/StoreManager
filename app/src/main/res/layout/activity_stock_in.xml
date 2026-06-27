@@ -31,6 +31,10 @@
             <Spinner android:id="@+id/spinnerItem" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"/>
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="পরিমাণ" android:textStyle="bold"/>
             <EditText android:id="@+id/etQuantity" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="পরিমাণ লিখো" android:inputType="numberDecimal" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DC নম্বর" android:textStyle="bold"/>
+            <EditText android:id="@+id/etDcNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="DC নম্বর লিখো" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="GST নম্বর" android:textStyle="bold"/>
+            <EditText android:id="@+id/etGstNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="GST নম্বর লিখো" android:layout_marginBottom="12dp"/>
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="কোথা থেকে এলো / উদ্দেশ্য" android:textStyle="bold"/>
             <EditText android:id="@+id/etPurpose" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="সাপ্লায়ার / উদ্দেশ্য" android:layout_marginBottom="12dp"/>
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="তারিখ" android:textStyle="bold"/>

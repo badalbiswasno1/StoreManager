@@ -16,7 +16,7 @@ public class StockInActivity extends AppCompatActivity {
     private DatabaseHelper db;
     private List<Item> items = new ArrayList<>();
     private Spinner spinnerItem;
-    private EditText etQuantity, etPurpose, etDate, etRemarks;
+    private EditText etQuantity, etDcNumber, etGstNumber, etPurpose, etDate, etRemarks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,8 @@ public class StockInActivity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         spinnerItem = findViewById(R.id.spinnerItem);
         etQuantity = findViewById(R.id.etQuantity);
+        etDcNumber = findViewById(R.id.etDcNumber);
+        etGstNumber = findViewById(R.id.etGstNumber);
         etPurpose = findViewById(R.id.etPurpose);
         etDate = findViewById(R.id.etDate);
         etRemarks = findViewById(R.id.etRemarks);
@@ -47,6 +49,8 @@ public class StockInActivity extends AppCompatActivity {
         entry.setItemName(selected.getName());
         entry.setType("IN");
         entry.setQuantity(qty);
+        entry.setDcNumber(etDcNumber.getText().toString().trim());
+        entry.setGstNumber(etGstNumber.getText().toString().trim());
         entry.setPurpose(etPurpose.getText().toString().trim());
         entry.setDate(etDate.getText().toString().trim());
         entry.setRemarks(etRemarks.getText().toString().trim());

@@ -10,7 +10,7 @@ import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DB_NAME = "storemanager.db";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
 
     public DatabaseHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -19,14 +19,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("CREATE TABLE items (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT NOT NULL, unit TEXT, opening_stock REAL DEFAULT 0, current_stock REAL DEFAULT 0)");
-        db.execSQL("CREATE TABLE stock_entries (id INTEGER PRIMARY KEY AUTOINCREMENT, item_id INTEGER, item_name TEXT, type TEXT, quantity REAL, tower TEXT, contractor TEXT, engineer TEXT, purpose TEXT, date TEXT, remarks TEXT, FOREIGN KEY(item_id) REFERENCES items(id))");
+        db.execSQL("CREATE TABLE stock_entries (id INTEGER PRIMARY KEY AUTOINCREMENT, item_id INTEGER, item_name TEXT, type TEXT, quantity REAL, tower TEXT, contractor TEXT, engineer TEXT, purpose TEXT, date TEXT, remarks TEXT, dc_number TEXT, gst_number TEXT, FOREIGN KEY(item_id) REFERENCES items(id))");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS items");
-        db.execSQL("DROP TABLE IF EXISTS stock_entries");
-        onCreate(db);
+        try { db.execSQL("ALTER TABLE stock_entries ADD COLUMN dc_number TEXT"); } catch (Exception e) {}
+        try { db.execSQL("ALTER TABLE stock_entries ADD COLUMN gst_number TEXT"); } catch (Exception e) {}
     }
 
     public long addItem(Item item) {
@@ -79,6 +78,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cv.put("purpose", entry.getPurpose());
         cv.put("date", entry.getDate());
         cv.put("remarks", entry.getRemarks());
+        cv.put("dc_number", entry.getDcNumber());
+        cv.put("gst_number", entry.getGstNumber());
         long id = db.insert("stock_entries", null, cv);
         db.close();
         return id;
@@ -110,6 +111,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             e.setPurpose(c.getString(8));
             e.setDate(c.getString(9));
             e.setRemarks(c.getString(10));
+            e.setDcNumber(c.getColumnIndex("dc_number") >= 0 ? c.getString(c.getColumnIndex("dc_number")) : "");
+            e.setGstNumber(c.getColumnIndex("gst_number") >= 0 ? c.getString(c.getColumnIndex("gst_number")) : "");
             list.add(e);
         }
         c.close();

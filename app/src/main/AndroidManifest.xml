@@ -18,6 +18,7 @@
         <activity android:name=".StockInActivity"/>
         <activity android:name=".StockOutActivity"/>
         <activity android:name=".ReportActivity"/>
+        <activity android:name=".SettingsActivity"/>
             <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="${applicationId}.provider"

@@ -12,6 +12,8 @@ public class StockEntry {
     private String purpose;
     private String date;
     private String remarks;
+    private String dcNumber;
+    private String gstNumber;
 
     public StockEntry() {}
 
@@ -37,4 +39,8 @@ public class StockEntry {
     public void setDate(String date) { this.date = date; }
     public String getRemarks() { return remarks; }
     public void setRemarks(String remarks) { this.remarks = remarks; }
+    public String getDcNumber() { return dcNumber; }
+    public void setDcNumber(String dcNumber) { this.dcNumber = dcNumber; }
+    public String getGstNumber() { return gstNumber; }
+    public void setGstNumber(String gstNumber) { this.gstNumber = gstNumber; }
 }

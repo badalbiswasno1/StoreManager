@@ -31,6 +31,8 @@
             <Spinner android:id="@+id/spinnerItem" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="12dp"/>
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="পরিমাণ" android:textStyle="bold"/>
             <EditText android:id="@+id/etQuantity" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="পরিমাণ লিখো" android:inputType="numberDecimal" android:layout_marginBottom="12dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="DC নম্বর" android:textStyle="bold"/>
+            <EditText android:id="@+id/etDcNumber" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="DC নম্বর লিখো" android:layout_marginBottom="12dp"/>
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="টাওয়ার নম্বর" android:textStyle="bold"/>
             <EditText android:id="@+id/etTower" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="যেমন: Tower-7" android:layout_marginBottom="12dp"/>
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="ঠিকাদারের নাম" android:textStyle="bold"/>

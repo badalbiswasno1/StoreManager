@@ -16,7 +16,7 @@ public class StockOutActivity extends AppCompatActivity {
     private DatabaseHelper db;
     private List<Item> items = new ArrayList<>();
     private Spinner spinnerItem;
-    private EditText etQuantity, etTower, etContractor, etEngineer, etPurpose, etDate, etRemarks;
+    private EditText etQuantity, etDcNumber, etTower, etContractor, etEngineer, etPurpose, etDate, etRemarks;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class StockOutActivity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         spinnerItem = findViewById(R.id.spinnerItem);
         etQuantity = findViewById(R.id.etQuantity);
+        etDcNumber = findViewById(R.id.etDcNumber);
         etTower = findViewById(R.id.etTower);
         etContractor = findViewById(R.id.etContractor);
         etEngineer = findViewById(R.id.etEngineer);
@@ -45,12 +46,14 @@ public class StockOutActivity extends AppCompatActivity {
         if (qtyStr.isEmpty()) { Toast.makeText(this, "পরিমাণ লিখো", Toast.LENGTH_SHORT).show(); return; }
         double qty = Double.parseDouble(qtyStr);
         Item selected = items.get(spinnerItem.getSelectedItemPosition());
-        if (qty > selected.getCurrentStock()) { Toast.makeText(this, "স্টক কম আছে! Available: " + selected.getCurrentStock(), Toast.LENGTH_LONG).show(); return; }
+        if (qty > selected.getCurrentStock()) { Toast.makeText(this, "স্টক কম! Available: " + selected.getCurrentStock(), Toast.LENGTH_LONG).show(); return; }
         StockEntry entry = new StockEntry();
         entry.setItemId(selected.getId());
         entry.setItemName(selected.getName());
         entry.setType("OUT");
         entry.setQuantity(qty);
+        entry.setDcNumber(etDcNumber.getText().toString().trim());
+        entry.setGstNumber("");
         entry.setTower(etTower.getText().toString().trim());
         entry.setContractor(etContractor.getText().toString().trim());
         entry.setEngineer(etEngineer.getText().toString().trim());
